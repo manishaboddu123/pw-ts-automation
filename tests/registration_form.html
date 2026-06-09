@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <h1>Registration Form</h1>
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+        .form{
+            color: black;
+            text-align: left;
+        }
+
+        .form input[type="text"],
+        .form input[type="email"],
+        .form input[type="password"]{
+            width: 250px;
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <form class="form">
+        <label for="fname">First name</label>
+        <input type="text" id="fname" placeholder="your first name here"><br>
+        <label for="lname">Last name</label>
+        <input type="text" id="lname" placeholder="your last name here"><br>
+        <label for="Email">Email Id</label>
+        <input type="email" name="email" placeholder="your email" ><br>
+        <label for=" password">password</label>
+        <input type="password"><br>
+        <label for=gender>gender:</label>
+        <input type="radio" id="male" name="gender" value="male" checked>male
+        <input type="radio" id="female" name="gender" value="female">female<br>
+        <label>Country:</label>
+        <select>
+            <option>India</option>
+            <option>Japan</option>
+            <option>malaysia</option>
+            <option>china</option>
+        </select><br>
+        <input type="checkbox" id="terms&conditions">
+        <label for="terms&conditions">I agree to the <a href="https://google.com">terms and condtions</a></label><br>
+        <button type="button">Register</button>
+    </form>
+</body>
+</html>
