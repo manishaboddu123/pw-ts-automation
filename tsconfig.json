@@ -30,7 +30,7 @@
         "./fixtures/*"
       ],
        "@testdata/*": [
-        "./test_data/*"
+        "./testdata/*"
       ],
         "@reports/*": [
           "./playwright-report/*"

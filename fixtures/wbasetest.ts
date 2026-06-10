@@ -1,10 +1,10 @@
 import {Page, test as base} from 'playwright/test';
-import { BasePage } from '../pages/basepage';
-import LoginPage from '../pages/loginpage';
-import DashboardPage from '../pages/dashboardpage';
-import EmpPage from '../pages/emppage';
-import PersonalDetailsPage from '../pages/PersonalDetailsPage';
-import PIMPage from '../pages/PIMPage';
+import { BasePage } from '@pages/basepage';
+import LoginPage from '@pages/loginpage';
+import DashboardPage from '@pages/dashboardpage';
+import EmpPage from '@pages/emppage';
+import PersonalDetailsPage from '@pages/PersonalDetailsPage';
+import PIMPage from '@pages/PIMPage';
 
 export const test = base.extend<{
     basepage:BasePage;

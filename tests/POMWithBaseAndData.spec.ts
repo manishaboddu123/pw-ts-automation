@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test"
-import { test } from "../fixtures/basetest";
-import appCredentials from "../test_data/appcredentials.json";
+import { test } from "@fixtures/basetest";
+import appCredentials from "@testdata/appcredentials.json";
 
 
 test.describe("test with base and data", () => {

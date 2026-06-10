@@ -31,6 +31,6 @@
     "@pages": "./pages",
     "@tests": "./tests",
     "@fixtures": "./fixtures",
-    "@data": "./test_data"
+    "@data": "./testdata"
   }
 }
