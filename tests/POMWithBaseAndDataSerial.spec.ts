@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test"
-import { test } from "../fixtures/wbasetest";
-import appCredentials from "../test_data/appcredentials.json";
+import { test } from "@fixtures/wbasetest";
+import appCredentials from "@testdata/appcredentials.json";
 
 test.describe.configure({mode:'serial'});
 test.describe("Orange HRM end to end tests", () =>{

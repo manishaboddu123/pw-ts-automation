@@ -1,5 +1,5 @@
 import {expect} from 'playwright/test';
-import { test } from '../fixtures/basetest';
+import { test } from '@fixtures/basetest';
 
 test("create an employee with POM base class example", async({basepage,loginpage, dashboardpage, emppage, personaldetailspage,pimpage})=>{
     await basepage.NavigatetoURL("https://vibetestq-osondemand.orangehrm.com/auth/login");

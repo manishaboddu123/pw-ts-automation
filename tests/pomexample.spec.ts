@@ -1,9 +1,9 @@
 import {test, expect } from "@playwright/test";
-import LoginPage from '../pages/loginpage';
-import DashBoardPage from '../pages/dashboardpage';
-import PIMPage from "../pages/PIMPage";
-import EmpPage from "../pages/emppage";
-import PersonalDetailsPage from "../pages/PersonalDetailsPage";
+import LoginPage from '@pages/loginpage';
+import DashBoardPage from '@pages/dashboardpage';
+import PIMPage from "@pages/PIMPage";
+import EmpPage from "@pages/emppage";
+import PersonalDetailsPage from "@pages/PersonalDetailsPage";
 
 test('POM Example', async ({page}) => {
     await page.goto('https://vibetestq-osondemand.orangehrm.com/auth/login');

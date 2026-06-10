@@ -1,8 +1,8 @@
 import { expect } from "@playwright/test"
-import { test } from "../fixtures/basetest";
+import { test } from "@fixtures/basetest";
 // import appCredentials from "../test_data/appcredentials.json";
 // import EmpData from "../test_data/empdata.json";
-import * as data from "../test_data/index";
+import * as data from "@testdata/index";
 
 test.describe("login with base and DDT", () => {
     test.beforeEach(async ({ page, basepage, loginpage, dashboardpage}) => {
