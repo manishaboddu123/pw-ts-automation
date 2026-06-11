@@ -8,12 +8,15 @@ import { defineConfig, devices } from '@playwright/test';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+const runId = new Date().toISOString().replace(/[:.]/g, '-');
+const runOutputDir = `test-results/pwreport-${runId}`;
+
 export default defineConfig({
   timeout: 300000, // 5 minutes
   expect: {
     timeout: 10000, // 10 seconds
   },
-  testDir: './tests',
+  testDir: 'tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -23,12 +26,14 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   // workers: 4,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html', { outputFolder: 'my-report' }],
-  ["allure-playwright"]
-],
+  reporter: [['html', { outputFolder: "playwright-report" }],
+  ['allure-playwright', { outputFolder: 'allure-results', detail: true, suiteTitle: true }],
+  ],
+  outputDir: `${runOutputDir}/artifacts`,
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    headless: false,
+    headless: process.env.CI ? true : false,
     // Base URL of the Application 
     baseURL: 'https://vibetestq-osondemand.orangehrm.com/',
     // baseURL: 'https://opensource-demo.orangehrmlive.com/',
@@ -47,19 +52,19 @@ export default defineConfig({
       use: {
         baseURL: 'https://vibetestq-osondemand.orangehrm.com/',
         ...devices['Desktop Chrome'],
-        
+
       },
       // grep: "@ind", // to run tests with @ind tag
       // testMatch: 'POMTestSerialMode.spec.ts'
-      // testMatch: 'POMWithDDT.spec.ts'
+      testMatch: 'POMWithDDT.spec.ts'
     },
-    {
-      // https://playwright.dev/docs/test-projects#configure-projects-for-multiple-environments
-      name: 'opensource',
-      use: {
-        baseURL: 'https://opensource-demo.orangehrmlive.com/',
-        ...devices['Desktop Chrome']
-      },
-    }
+    // {
+    //   // https://playwright.dev/docs/test-projects#configure-projects-for-multiple-environments
+    //   name: 'opensource',
+    //   use: {
+    //     baseURL: 'https://opensource-demo.orangehrmlive.com/',
+    //     ...devices['Desktop Chrome']
+    //   },
+    // }
   ],
 });
