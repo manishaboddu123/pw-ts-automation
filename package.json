@@ -8,24 +8,21 @@
     "generate:allure": "npx allure generate ./allure-results -o ./allure-report",
     "open:allure": "npx allure open ./allure-report",
     "runtestwithallure": "npm run test:vibtestq && npm run generate:allure && npm run open:allure"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "devDependencies": {
-    "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.1",
-    "allure-playwright": "^3.9.0"
-  },
   "dependencies": {
     "@faker-js/faker": "^10.4.0",
     "@ngneat/falso": "^8.0.2",
-    "allure": "^3.9.0",
     "dotenv": "^17.4.2",
     "mysql2": "^3.22.4",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
+    "allure-playwright": "^3.9.0",
+    "allure-commandline": "^2.42.0"
   },
   "paths": {
     "@pages": "./pages",
