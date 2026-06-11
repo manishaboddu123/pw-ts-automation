@@ -16,7 +16,7 @@ export default defineConfig({
   expect: {
     timeout: 10000, // 10 seconds
   },
-  testDir: 'tests',
+  testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -56,7 +56,8 @@ export default defineConfig({
       },
       // grep: "@ind", // to run tests with @ind tag
       // testMatch: 'POMTestSerialMode.spec.ts'
-      testMatch: 'POMWithDDT.spec.ts'
+      // testMatch: 'POMWithDDT.spec.ts'
+      testMatch:'POMWithBaseAndData.spec.ts'
     },
     // {
     //   // https://playwright.dev/docs/test-projects#configure-projects-for-multiple-environments
