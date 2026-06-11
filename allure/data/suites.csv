@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","14404","create an employee with POM base class example","vibetestq","2026-06-11","passed","2026-06-11","test with base and data","POMWithBaseAndData.spec.ts","",""
+"","3078","Create an emloyee with base and data - Open Source","vibetestq","2026-06-11","passed","2026-06-11","test with base and data","POMWithBaseAndData.spec.ts","",""
